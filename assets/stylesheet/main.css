@@ -1,0 +1,328 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of Eric Meyer's CSS Reset */
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+  background: #3D9970;
+  overflow: hidden;
+  height: 150px;
+
+}
+
+h1 {
+  font-family: OpenSansExtraBold, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: bold;
+  color: #d8e8d8;
+  text-shadow: 4px 2px 2px rgba(24, 23, 23, 0.3);
+}
+
+
+/* body
+-----------------------------------------------------------------------------*/
+body {
+  overflow: hidden;
+  background: linear-gradient(270deg, #ffdc00, #01ff70, #2ecc40, #3d9970, #39cccc, #7fdbff);
+  background-size: 1200% 1200%;
+
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+
+
+
+/* main
+-----------------------------------------------------------------------------*/
+
+
+.haftsin {
+
+  background: url("../images/5367.jpg") no-repeat center;
+  width: 800px;
+  margin: 0 auto;
+  justify-content: center;
+  border-radius: 50%;
+
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 125px 125px 138px;
+  grid-template-rows: 83px 66px 87px 136px;
+  grid-gap: 10px;
+  /* padding: 12px; */
+  grid-template-areas: 
+                       "space mirror flower"
+                       "coin fish plant"
+                       "sumac egg senjed"
+                       "samanu apple garlic";
+}
+
+.item:before {
+  width: 128px;
+  height: 82px;
+  transition: transform .5s ease;
+}
+
+.item:active{
+  transform: scale(1.5);
+
+}
+
+.item img {
+  width: 150px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+/*space*/
+.item:nth-child(1) {
+  grid-area: space;
+}
+
+/*mirror*/
+.item:nth-child(2) {
+  grid-area: mirror;
+    margin-top: -30px;
+    justify-self: center;
+
+}
+.item:nth-child(2) img {
+  width: 200px;
+  height: 150px;
+  border-radius: 0%;
+
+}
+
+/*flower*/
+.item:nth-child(3) {
+  grid-area: flower;
+  margin-top: -60px;
+  justify-self: left;
+
+}
+.item:nth-child(3) img {
+  width: 100px;
+  height: 200px;
+
+}
+
+/*coin*/
+.item:nth-child(4) {
+  grid-area: coin;
+  justify-self: end;
+  margin-left: 10px;
+}
+
+/*fish*/
+.item:nth-child(5) {
+  grid-area: fish;
+    justify-self: center;
+    margin-right: -35px;
+    margin-top: -4px;
+}
+
+/*plant*/
+.item:nth-child(6) {
+  grid-area: plant;
+  justify-self: left;
+  margin-left: 10px;
+}
+
+/*sumac*/
+.item:nth-child(7) {
+  margin-left: -56px;
+  grid-area: sumac;
+  justify-self: start;
+}
+
+/*egg*/
+.item:nth-child(8) {
+  grid-area: egg;
+  justify-self: center;
+}
+
+/*senjed*/
+.item:nth-child(9) {
+  justify-self: start;
+  grid-area: senjed;
+  margin-left: 86px;
+}
+
+/*samanu*/
+.item:nth-child(10) {
+  grid-area: samanu;
+
+}
+
+/*apple*/
+.item:nth-child(11) {
+  grid-area: apple;
+  justify-self: start;
+  margin-left: 12px;
+}
+
+/*garlic*/
+.item:nth-child(12) {
+  grid-area: garlic;
+  justify-self: left;
+  margin-left: 30px;
+}
+
+
+/*popup and text*/
+ 
+  .popup {
+  position: absolute;
+  display: none;
+  height: auto;
+  top:20px;
+  width: 250px;
+  padding: 10px;
+  border-radius: 20%;
+    
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #3d9970;
+}  
+ .text {
+  color: #eeeeee;
+  background: #3D9970;
+  font-size: 14px;
+  font-weight: lighter;
+  font-family: OpenSansRegular, sans-serif;
+  
+  
+  /* -webkit-transform: translate(-50%, -50%); */
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+.text em{
+  color: gainsboro;
+  font-weight: bold;
+} 
+
+.item:active .popup {
+  display: inline;
+  opacity: 1;
+} 
+
+/*footer*/
+.footer {
+  background: #3D9970;
+  overflow: hidden;
+  height: 100px;
+
+}
+
+.footer p {
+  color: #eeeeee;
+  background: #3D9970;
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-family: SansRegular, sans-serif;
+
+}
+
